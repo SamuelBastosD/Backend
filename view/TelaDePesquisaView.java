@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
 public class TelaDePesquisaView extends JFrame {
     public static JLabel lblPesquisa;
     public static JTextField txtPesquisa;
@@ -224,8 +223,9 @@ public class TelaDePesquisaView extends JFrame {
         return "<html><body>" + strTexto + "</body></html>";
     }
 
+    public static TelaDePesquisaView appTelaDePesquisaView;
     public static void main(String[] args) {
-        TelaDePesquisaView appTelaDePesquisaView = new TelaDePesquisaView();
+        appTelaDePesquisaView = new TelaDePesquisaView();
         appTelaDePesquisaView.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
