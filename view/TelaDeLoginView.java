@@ -19,7 +19,7 @@ public class TelaDeLoginView extends JFrame
     public TelaDeLoginView()
     {
         super("Tela de Login");
-        setLayout(new FlowLayout());
+        setLayout(new GridLayout(6,1,5,5));
 
         lblLogin = new JLabel("Login:");
         add(lblLogin);
@@ -43,7 +43,9 @@ public class TelaDeLoginView extends JFrame
             new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent event) {
-                    TelaDeLoginController.logarController(txtLogin.getText(), String.valueOf(txtSenha.getPassword()));
+                    if (validarCampos() == true) {
+                        TelaDeLoginController.logarController(txtLogin.getText(), String.valueOf(txtSenha.getPassword()));
+                    }
                 }
             }
         );
@@ -81,8 +83,7 @@ public class TelaDeLoginView extends JFrame
             }
         );
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(150, 200);
+        setSize(200, 600);
         setVisible(true);
     }
 
@@ -101,12 +102,13 @@ public class TelaDeLoginView extends JFrame
     }
 
     public static String setHtmlFormat(String strTexto) {
-        return "<html><body>" + strTexto + "</body></html>";
+        return "<html><body><center>" + strTexto + "</center></body></html>";
     }
 
     public static TelaDeLoginView appTelaDeLoginView;
     public static void main(String[] args) {
         appTelaDeLoginView = new TelaDeLoginView();
-        // appTelaDeLoginView.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        appTelaDeLoginView.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        InterfaceView.definirIcone(appTelaDeLoginView);
     }
 }

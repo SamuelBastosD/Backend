@@ -12,6 +12,7 @@ public class TelaDeMenuController extends TelaDeMenuView {
         TelaDeCadastroView.appTelaDeCadastroView.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e){
                 appTelaDeMenuView.setVisible(true);
+                InterfaceView.definirIcone(TelaDeCadastroView.appTelaDeCadastroView);
             }
         });
     }
@@ -23,6 +24,7 @@ public class TelaDeMenuController extends TelaDeMenuView {
         TelaDePesquisaView.appTelaDePesquisaView.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e){
                 appTelaDeMenuView.setVisible(true);
+                InterfaceView.definirIcone(TelaDePesquisaView.appTelaDePesquisaView);
             }
         });
     }
@@ -34,6 +36,7 @@ public class TelaDeMenuController extends TelaDeMenuView {
         TelaDeAtualizacaoView.appTelaDeAtualizacaoView.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e){
                 appTelaDeMenuView.setVisible(true);
+                InterfaceView.definirIcone(TelaDeAtualizacaoView.appTelaDeAtualizacaoView);
             }
         });
     }
@@ -45,6 +48,7 @@ public class TelaDeMenuController extends TelaDeMenuView {
         TelaDeRemoverView.appTelaDeRemoverView.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e){
                 appTelaDeMenuView.setVisible(true);
+                InterfaceView.definirIcone(TelaDeRemoverView.appTelaDeRemoverView);
             }
         });
     }

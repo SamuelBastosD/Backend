@@ -10,4 +10,12 @@ public class TelaDeLoginController extends TelaDeLoginView {
     public static void logarController(String login, String senha) {
         TelaDeLoginModel.logarModel(login, senha);
     }
+
+    public static void abrirTelaDeMenu() {
+        TelaDeMenuView.appTelaDeMenuView = new TelaDeMenuView();
+        TelaDeMenuView.appTelaDeMenuView.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        InterfaceView.definirIcone(TelaDeMenuView.appTelaDeMenuView);
+
+        appTelaDeLoginView.dispose();
+    }
 }

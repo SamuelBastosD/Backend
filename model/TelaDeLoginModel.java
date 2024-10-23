@@ -1,3 +1,4 @@
+
 package model;
 import java.sql.*;
 import controller.*;
@@ -11,6 +12,7 @@ public class TelaDeLoginModel {
             ResultSet rstSqlLogin = stmSqlLogin.executeQuery(strSqlLogin);
             if (rstSqlLogin.next()) {
                 TelaDeLoginController.notificarUsuario("Login realizado com sucesso!!!");
+                TelaDeLoginController.abrirTelaDeMenu();
             } else {
                 TelaDeLoginController.notificarUsuario("Login e/ou senha não encontrados! Por favor, verifique e tente novamente.");
             }
